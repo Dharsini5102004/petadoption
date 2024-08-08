@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cat Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, .main {
+            position: relative;
+        }
+        .container {
+            margin-left: 30px;
+            padding-left: 20px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            background-image: url('your-image-url.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            z-index: 3;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+        .sidebar .bar-block {
+            margin: 0;
+        }
+        .sidebar .bar-item {
+            display: block;
+            padding: 16px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar .bar-item:hover {
+            background-color: white;
+            color: #f44336;
+        }
+        .main {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .row-padding {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .half {
+            flex: 1;
+            max-width: calc(50% - 10px); 
+        }
+        .half img {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .half img:hover {
+            opacity: 1;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,1); /* Set background to complete black */
+        }
+        .modal-content {
+            background-color: black; 
+            margin: 5% auto; 
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+        }
+        .modal img {
+            width: 100%;
+        }
+        .modal-description {
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #d32f2f;
+        }
+        .xxxlarge {
+            font-size: 36px;
+        }
+        .jumbo {
+            font-size: 48px;
+        }
+        .text-red {
+            color: #f44336;
+        }
+        .round {
+            border-radius: 5px;
+            float: left;
+        }
+        .padding {
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+<nav class="sidebar" id="mySidebar">
+    <div class="container">
+        <h3 class="padding-64" style="font-family:cursive; font-size: 30px;"><b>Pets & Co</b></h3><br><br>
+    </div>
+    <div class="bar-block">
+        <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\demo.html" class="bar-item">Home</a><br>
+        <a href="#showcase" class="bar-item">Showcase</a><br>
+        <a href="#services" class="bar-item">Moto.</a><br>
+        <a href="#designers" class="bar-item">Frequently Asked Questions</a><br>
+        <a href="#packages" class="bar-item">Choosing a Right Pet</a>
+    </div>
+</nav>
+
+<div class="main" style="margin-top:80px">
+    <div class="container" id="showcase">
+        <h1 class="jumbo"><b>Let us begin the change</b></h1>
+        <h1 class="xxxlarge text-red"><b>Adopt Us!..</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br><br>
+    </div>
+    <div class="row-padding">
+        <div class="half">
+            <img src="https://www.thesprucepets.com/thmb/1Q3ZQVxADUQ2Aam4mhSS8FzqKP4=/2164x0/filters:no_upscale():strip_icc()/GettyImages-904624038-8a3d9763601742258dd48df05e1ce69f.jpg" onclick="onClick(this, 'Name: Ricasso<br>Breed: Persian Cat<br>Age: 1 year<br>Gender: Male<br>About the breed: When you think of Persian cats, you probably picture the iconic Persian with long, silky, white fur and bright, blue eyes sitting on a pink silk cushion. Despite their appearances in cat food commercials, Persians come in a wide range of colors and varieties. In addition to the white or silver Persians we all know, these pretty kitties can have grey, orange, black, tri-colored, and even calico coats')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdfQuv75pW0KTiwVJDu4Efwm6OKfCCUyTJfmgBuJvjpQaPMDCreTwsUPQE6ywZAPX8n2w&usqp=CAU" onclick="onClick(this, 'Name: Fian<br>Breed: Scottish Fold<br>Age: 1 year<br>Gender: Male<br><b>About the Breed:</b> The Scottish Fold is seemingly made entirely of curves! This rounded, medium sized cat is compact and solid, with a round head, large round eyes and most notably their ears are small and neatly folded forward covering the ear opening. The Scottish Fold has a sweet expression and a luxurious short, dense coat.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQKI_zmOEDjJjti52iPG0sZ-0Z2gClcjdNBQDny83p5aSP3dqegTQdWH9p80rqc-rR74Q&usqp=CAU" onclick="onClick(this,'Name: Wirrehair<br>Breed: America Wirehair<br>Age: 2 years<br>Gender: Female<br>Life-span:10-16 Years<br><br>Pet weight:12-15 pounds<br>About the Breed:</b> The American wirehair cat is a breed native to New York, with a wiry, crimped coat resulting from a natural genetic mutation. These cats are loving, easygoing, and affectionate companion animals. Like true New Yorkers, these kitties have an independent streak that makes them a great fit for owners with busy lifestyles.<br>')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7cbwRLaCoa6OC8AFi-GfekfrreQMWT0nZg&s" onclick="onClick(this, 'Name: Stellicus<br>Breed: Ragamuffin<br>Age: 2<br>Gender: Female<br>Lifespan:10 years<br><b>About the Breed:</b><br> Given their name, it should be no surprise that Ragamuffins have the tendency to stretch out and go limp in their owner’s arms like, well, a rag. Often called “puppy-like,” these large fur balls are attention-seekers, who enjoy playtime, walks on a leash, and can even learn a trick or two.')">
+            <img src="https://d2zp5xs5cp8zlg.cloudfront.net/image-70159-800.jpg" onclick="onClick(this, 'Name: Brutus<br>Breed: Siamese Cat<br>Age: 1 year<br>Gender: Male<br><b>About the Breed:</b><br>The Siamese cat is one of the most affectionate, sociable, and good-natured breeds. They are also needy and crave human attention.')">
+        </div>
+        <div class="half">
+            <img src="https://happyandpolly.com/cdn/shop/articles/shutterstock_2139183541.jpg?v=1658221954" onclick="onClick(this, 'Name: Tessa<br>Breed: Bombay Catbr>Age: 6 months<br>Gender: Female<br><br>About: Cats are known for being independent, but it seems Bombay cats missed the memo. Bombays make lovely pets, craving human company and even venturing into Velcro cat territory.If you work long hours away from home or travel a lot, then a Bombay might not be the best choice. They simply need too much interaction and will get depressed if left alone.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOgVZXheZZqKnEyvQmXxGDyOCnPsNtexuzXQ&s" onclick="onClick(this, 'Name: Machos<br>Breed: Somali Cat<br>Age: 4 years<br>Gender: Male<br>Trained/Not Trained: Trained<br>About: The Somali is an active cat who loves to jump and play. In spite of that, she is an easy cat to have in your home. Somalis love people and other animals. Somalis are social cats and like to have some company. This company can be provided by another cat or when people are not at home.They will play with their own toys for hours, but also enjoy a good period of time of interactive play with their parents. Somalis will talk in their soft, quiet voice.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQenvGJqLNBCf7RuhGBh2JEI2Zl0JOZwcxEWebhskDqa4Qcm725" onclick="onClick(this, 'Name: Rachael<br>Breed: Turkish Van<br>Age: 1 yearbr>Gender: Female<br>About: The Turkish Van is a characterful cat, loyal and loving and also intelligent and affectionate. They are also a very active cat, enjoying climbing, leaping and finding high spots to relax in the tops of doors and along curtain rails are a favourite.This is a cat for someone who really adores playful cats, and wants to spend time devising games and doesn’t mind their cat inviting themselves in to share a shower or bath!')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ghislaine_6028.jpg/640px-Ghislaine_6028.jpg" onclick="onClick(this, 'Name: Jessic<br>Breed: Javanese<br>Age: 2 years<br>Gender: Male<br>About: The Javanese is inclined to have the same wonderful but (slightly less) demanding personality as the Siamese: endlessly interested, intelligent and active. This is a cat with a strong desire to spend time with his people and involve himself in everything they are doing. If it would bother you to have a cat constantly shadowing you, do not get a Javanese.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtHFDbZBYWLBpmTGM6OC6A6Np7LQWT8FmbQA&s" onclick="onClick(this, 'Name: Sitrus<br>Breed: Selkrik Rex<br>Age: 1 1/2 years<br>Gender: Male<br>About:While the Selkirk Rex has a very mellow temperament, it is also warm and affectionate; it tends to get along with everyone. This medium to large-sized feline is exceptionally tolerant and friendly, making it a great pet for families with kids or other pets ')">
+        </div>
+    </div>
+</div>
+
+<div id="modal01" class="modal" onclick="hideModal()">
+    <span class="button display-topright">&times;</span>
+    <div class="modal-content">
+        <img id="img01" style="max-width:100%">
+        <div id="caption" class="modal-description"></div>
+    </div>
+</div>
+
+
+<script>
+
+    function onClick(element, description) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("caption").innerHTML = description;
+        document.getElementById("modal01").style.display = "block";
+        document.getElementById("mySidebar").classList.add("hidden");
+    }
+
+    function hideModal() {
+        document.getElementById("modal01").style.display = "none";
+        document.getElementById("mySidebar").classList.remove("hidden");
+    }
+</script>
+<div class="main">
+    <div class="container" id="services" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Moto.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p>To address the welfare of stray animals in the city of Coimbatore, Tamil Nadu, India. This we do through animal birth control and anti-rabies drives, and by rescuing animals that are in urgent need of treatment. The rescued animals are treated and rehabilitated at our ABC and Rescue Centre before being released back to their community. The HAS Sanctuary becomes the new home of the ones for whom release wouldn't be safe.</p>
+        <p>The Annual Report 2022-2023 is a detailed account of our accomplishments during the year. Shared through descriptive text and vivid images, the publication highlights the tireless efforts of our management team, staff members, donors, volunteers, and well-wishers in creating a more compassionate world for the street animals of Coimbatore.</p>
+    </div>
+    
+    <div class="container" id="designers" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Frequently Asked Questions.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p><b>1. What are the various modes of payment accepted?</b></p>
+        <p>You can make payment via Gpay, PhonePay, Paytm, UPI, Net Banking.</p>
+        <p><b>2. What are its hours of operation?</b></p>
+        <p>Sunday-Saturday (9.00 A.M - 6.00 P.M)</p>
+        <p><b>3. Do I need to come to the centre to choose or pick up my pet?</b></p>
+        <p>We strongly encourage you to come to our rehab centre, spend some time with the inmates and choose the right pet for yourself and take them home. However, in scenarios where you can’t, our adoption team will help you with the process.</p>
+        <p><b>4. Are the animals house-trained?</b></p>
+        <p>Most of the animals at AMTM are rescued stray animals who have spent their lives outdoors. However, once at our centre, we try to train them to live indoors. They are familiarised with people and made to feel comfortable in their company. Additionally, all AMTM animals are sterilized and fully vaccinated.</p>
+        <p><b>5. Do you have pedigree animals for adoption?</b></p>
+        <p>Yes. AMTM is dedicated to the service of stray and abandoned animals which includes all species. However, this is rare.</p>
+    </div></div>
+    <img src="https://media.tenor.com/AOdrE-TKs7cAAAAj/dancing-cat-cat-dance.gif" height="500px" width="300px" style="display: block; margin: 0 auto;">
+     <div class="main">
+    <div class="container" id="packages" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Choosing a Right Pet.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p>Choosing the right pet:
+            Before you decide to adopt, we recommend you consider a few factors:
+            <ul>
+                <li>Do you have lots of time to entertain an energetic animal or are you looking for an older, calmer pet?</li>
+                <li>Do you have an outdoor space that your pet can explore safely? Or would you prefer an animal that's comfortable spending time indoors?</li>
+                <li>Do you already have a pet? If yes, what kind of temperament does your existing pet have?</li>
+                <li>If you already have a pet, please bring them with you when you come to the shelter. Photos of your help will help us advise you on who from our animal family will be a good fit for you.</li>
+            </ul>
+        </p>
+    </div></div>
+</body>
+</html>

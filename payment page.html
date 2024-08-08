@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .row-padding img {
+            margin-bottom: 12px
+        }
+
+        /* Set the width of the sidebar to 120px */
+        .sidebar {
+            width: 120px;
+            background: #0c0707;
+        }
+
+        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+        #main {
+            margin-left: 120px
+        }
+
+        /* Remove margins from "page content" on small screens */
+        @media only screen and (max-width: 600px) {
+            #main {
+                margin-left: 0
+            }
+        }
+    </style>
+</head>
+
+<body class="black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="sidebar bar-block small hide-small center">
+    <!-- Avatar image in top left corner -->
+    <img src="https://w0.peakpx.com/wallpaper/136/607/HD-wallpaper-golden-retriever-dogs-with-hats-is-sitting-on-road-dog.jpg" style="width:100%">
+    <a href="#" class="bar-item button padding-large black">
+        <i class="fa fa-home xxlarge"></i>
+        <p>HOME</p>
+    </a>
+    <a href="#about" class="bar-item button padding-large hover-black">
+        <i class="fa fa-user xxlarge"></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#photos" class="bar-item button padding-large hover-black">
+        <i class="fa fa-eye xxlarge"></i>
+        <p>PHOTOS</p>
+    </a>
+    <a href="#contact" class="bar-item button padding-large hover-black">
+        <i class="fa fa-envelope xxlarge"></i>
+        <p>CONTACT</p>
+    </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="top hide-large hide-medium" id="myNavbar">
+    <div class="bar black opacity hover-opacity-off center small">
+        <a href="#" class="bar-item button" style="width:25% !important">HOME</a>
+        <a href="#about" class="bar-item button" style="width:25% !important">ABOUT</a>
+        <a href="#photos" class="bar-item button" style="width:25% !important">PHOTOS</a>
+        <a href="#contact" class="bar-item button" style="width:25% !important">CONTACT</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="padding-large" id="main">
+    <!-- Header/Home -->
+    <header class="container padding-32 center black" id="home">
+        <h1 class="jumbo"><span class="hide-small">Grooming</span> Dales</h1>
+        <p style="font-size: larger;color: rgb(240, 120, 8);">A d o p t . D o n ' t S h o p !</p>
+        <img src="https://w0.peakpx.com/wallpaper/136/607/HD-wallpaper-golden-retriever-dogs-with-hats-is-sitting-on-road-dog.jpg" alt="boy" class="image" width="992"
+             height="1108">
+    </header>
+
+    <!-- About Section -->
+    <div class="content justify text-grey padding-64" id="about">
+        <h2 class="text-light-grey">Why Adoption ?</h2>
+        <hr style="width:200px" class="opacity">
+        <p>Animals are placed up for adoption for numerous reasons like being abandoned, lost, or rehomed from their
+            current family.t’s a way of giving a loving new home to a shelter animal – and maybe even saving its
+            life. There are many different animal care issues to consider during the adoption process, but it will
+            all be worthwhile when the new owner goes home with their adopted pet.</p>
+        <h3 class="padding-16 text-light-grey">Benefits</h3>
+        <p class="wide">Love & Protective</p>
+        <div class="white">
+            <div class="dark-grey" style="height:28px;width:95%"></div>
+        </div>
+        <p class="wide">Reduces stress level</p>
+        <div class="white">
+            <div class="dark-grey" style="height:28px;width:85%"></div>
+        </div>
+        <p class="wide">Cuddle Companion</p>
+        <div class="white">
+            <div class="dark-grey" style="height:28px;width:80%"></div>
+        </div><br>
+
+        <div class="row center padding-16 section light-grey">
+            <div class="quarter section">
+                <span class="xlarge">1050+</span><br>
+                International Clients
+            </div>
+            <div class="quarter section">
+                <span class="xlarge">109+</span><br>
+                Branches
+            </div>
+            <div class="quarter section">
+                <span class="xlarge">544+</span><br>
+                Adopted last-year
+            </div>
+            <div class="quarter section">
+                <span class="xlarge">560+</span><br>
+                Waiting for home
+            </div>
+        </div>
+
+        <button class="button light-grey padding-large section">
+            <i class="fa fa-download"></i><a href="brochure.html"> Download Brochure<a>
+        </button>
+
+        <!-- Grid for pricing tables -->
+        <h3 class="padding-16 text-light-grey">Our Price</h3>
+        <div class="row-padding" style="margin:0 -16px">
+            <div class="half margin-bottom">
+                <ul class="ul white center opacity hover-opacity-off">
+                    <li class="dark-grey xlarge padding-32">Premium</li>
+                    <li class="padding-16">Straight breeds</li>
+                    <li class="padding-16">Healthy pets with atmost care</li>
+                    <li class="padding-16">Well Trained</li>
+                    <li class="padding-16">Vaccinated</li>
+                    <li class="padding-16">
+                        <h2>$ 950</h2>
+
+                    </li>
+                    <li class="light-grey padding-24">
+                        <button class="button white padding-large hover-black"><a href="payment.html">Pay now</a></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="half">
+                <ul class="ul white center opacity hover-opacity-off">
+                    <li class="dark-grey xlarge padding-32">Basic</li>
+                    <li class="padding-16">Cross breeds</li>
+                    <li class="padding-16">Street animals that are recovered</li>
+                    <li class="padding-16">Healthy</li>
+                    <li class="padding-16">Vaccinated</li>
+                    <li class="padding-16">
+                        <h2>$ 500</h2>
+                    </li>
+                    <li class="light-grey padding-24">
+                        <button class="button white padding-large hover-black">Pay now</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Grid/Pricing tables -->
+        </div>
+
+        <!-- Testimonials -->
+        <h3 class="padding-24 text-light-grey">Top clients</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTawkHT2kSXFaWXfH2lLpfdq3HoEFuBpxu1BhaTrPNUIg&s" alt="Avatar"
+             class="left circle margin-right" style="width:80px">
+        <p><span class="large margin-right">Rebecca.</span> Torontto.</p>
+        <p>One of our happy customers and usually adopt 5 pets every year.</p><br>
+
+        <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar"
+             class="left circle margin-right" style="width:80px">
+        <p><span class="large margin-right">Katherine peirce.</span> New delhi.</p>
+        <p>She loves furs and keep adopting them every single year.</p>
+        <!-- End About Section -->
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="padding-64 content" id="photos">
+        <h2 class="text-light-grey">Photos</h2>
+        <hr style="width:200px" class="opacity">
+
+        <!-- Grid for photos -->
+        <div class="row-padding" style="margin:0 -16px">
+            <div class="half">
+                <img src="https://w0.peakpx.com/wallpaper/136/607/HD-wallpaper-golden-retriever-dogs-with-hats-is-sitting-on-road-dog.jpg"
+                     style="width:100%">
+                <img src="https://www.cnet.com/a/img/resize/ab3f7a2db81e71a19e4516a54675bb5f9d1e437a/hub/2023/06/23/57af12fc-e089-44b0-b767-05f4e28b07c4/adorable-pets-bjones-spy-103123-15208.jpg?auto=webp&fit=crop&height=900&width=1200"
+                     style="width:100%">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/dogs-as-pets-1645735234.jpg"
+                     style="width:100%">
+            </div>
+
+            <div class="half">
+                <img src="https://images.unsplash.com/photo-1617816497405-99399d0be66b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1268&q=80"
+                     style="width:100%">
+                <img src="https://imageio.forbes.com/blogs-images/jvchamary/files/2018/05/Golden-Retriever-puppy-1200x857.jpg?format=jpg&width=960"
+                     style="width:100%">
+                <img src="https://image.shutterstock.com/image-photo/surprised-shocked-funny-pet-dog-600w-2133887292.jpg"
+                     style="width:100%">
+            </div>
+            <!-- End photo grid -->
+        </div>
+        <!-- End Portfolio Section -->
+    </div>
+
+    <!-- Contact Section -->
+    <div class="padding-64 content text-grey" id="contact">
+        <h2 class="text-light-grey">Contact Me</h2>
+        <hr style="width:200px" class="opacity">
+
+        <div class="section">
+            <p><i class="fa fa-map-marker fa-fw xxlarge margin-right"></i>New York,US</p>
+            <p><i class="fa fa-phone fa-fw xxlarge margin-right"></i> Phone: +00 151515</p>
+            <p><i class="fa fa-envelope fa-fw xxlarge margin-right"> </i> Email: mail@mail.com</p>
+        </div><br>
+        <p>Lets get in touch. Send me a message:</p>
+
+        <form action="/action_page.php" target="_blank">
+            <p><input class="input padding-16" type="text" placeholder="Name" required name="Name"></p>
+            <p><input class="input padding-16" type="text" placeholder="Email" required name="Email"></p>
+            <p><input class="input padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+            <p><input class="input padding-16" type="text" placeholder="Message" required name="Message"></p>
+            <p>
+                <button class="button light-grey padding-large" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                </button>
+            </p>
+        </form>
+        <!-- End Contact Section -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="container padding-64 center opacity light-grey xlarge">
+        <i class="fa fa-facebook-official hover-opacity"></i>
+        <i class="fa fa-instagram hover-opacity"></i>
+        <i class="fa fa-snapchat hover-opacity"></i>
+        <i class="fa fa-pinterest-p hover-opacity"></i>
+        <i class="fa fa-twitter hover-opacity"></i>
+        <i class="fa fa-linkedin hover-opacity"></i>
+        <p class="medium">Template by <a href="https://www.w3schools.com/w3css/default.asp"
+                target="_blank">w3.css</a></p>
+    </footer>
+
+    <!-- End page content -->
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        body, h1, h2, h3, h4, h5, h6 {
+            background-color:rgb(31, 29, 29);
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 120px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #0c0707;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .sidebar a {
+            padding: 3px 0;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar a.active {
+            background-color: black;
+        }
+
+        .sidebar i {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 30px;
+        }
+
+        .main-content {
+            margin-left: 140px;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .sidebar {
+                width: 0%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar a {
+                float: left;
+                padding: 15px;
+                text-align: left;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .sidebar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 20px;
+            margin-left: 100px;
+            margin-right: 225px;
+        }
+
+        .photo-grid a {
+            display: block;
+            position: relative;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-grid a:hover img {
+            transform: scale(1.05);
+        }
+
+        .progress-bar-container {
+            background-color: rgb(239, 229, 229);
+        }
+
+        .progress-bar {
+            height: 28px;
+            background-color: darkgrey;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(46, 45, 45);
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat span {
+            font-size: 24px;
+            display: block;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: lightgrey;
+            padding: 10px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            border: none;
+        }
+
+        .button-container button a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <img src="https://w0.peakpx.com/wallpaper/136/607/HD-wallpaper-golden-retriever-dogs-with-hats-is-sitting-on-road-dog.jpg" alt="Avatar">
+    <a href="#" class="active">
+        <i class="fa fa-home"></i>
+        <p>HOME</p>
+    </a>
+    <a href="#about">
+        <i class="fa fa-user"></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#photos">
+        <i class="fa fa-eye"></i>
+        <p>PHOTOS</p>
+    </a>
+    <a href="#contact">
+        <i class="fa fa-envelope"></i>
+        <p>CONTACT</p>
+    </a>
+    <a href="login.html">
+        <i class="fa fa-spinner fa-spin"></i>
+        <p>LOGIN</p>
+    </a>
+</div>
+
+<div class="main-content">
+    <header id="home"><center>
+        <h1><span>Pets & </span> Co 🏠︎</h1></center>
+        <center>
+            <p style="font-size: larger;color: rgb(240, 120, 8);">A d o p t . D o n 't &nbsp; S h o p !</p>
+        </center>
+        <img src="https://w0.peakpx.com/wallpaper/136/607/HD-wallpaper-golden-retriever-dogs-with-hats-is-sitting-on-road-dog.jpg" alt="Dog" style="width:100%">
+    </header><br><br>
+
+    <!-- About Section -->
+    <div id="about">
+        <h2>Why Adoption?</h2>
+        <p>Animals are placed up for adoption for numerous reasons like being abandoned, lost, or rehomed from their current family. It’s a way of giving a loving new home to a shelter animal – and maybe even saving its life. There are many different animal care issues to consider during the adoption process, but it will all be worthwhile when the new owner goes home with their adopted pet.</p>
+        <br><br>
+        <h3>Our Price</h3>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; margin: 8px; min-width: 200px;">
+                <ul style="list-style: none; padding: 0; margin: 0; background-color: white; text-align: center; opacity: 0.9;">
+                    <li style="background-color:  rgb(71, 68, 68); padding: 32px; font-size: 24px;">Premium</li>
+                    <li style="padding: 16px; color: #575757;">Straight breeds</li>
+                    <li style="padding: 16px; color: #575757;">Healthy pets with atmost care</li>
+                    <li style="padding: 16px; color: #575757;">Well Trained</li>
+                    <li style="padding: 16px; color: #575757;">Vaccinated</li>
+                    <li style="padding: 16px; background-color:black">
+                        <h2>At its Original cost</h2>
+                    </li>
+                    <li style="background-color:  rgb(71, 68, 68); padding: 24px;">
+                        <button style="background-color: rgb(41, 39, 39); padding: 10px 20px; cursor: pointer;">
+                            <a href="payment.html" style="text-decoration: none; color: inherit;"><a href="#photos" style="color: gray;">check now!</a>                        </button>
+                            </a></a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="flex: 1; margin: 8px; min-width: 200px;">
+                <ul style="list-style: none; padding: 0; margin: 0; background-color: white; text-align: center; opacity: 0.9;">
+                    <li style="background-color: rgb(71, 68, 68); padding: 32px; font-size: 24px;">Basic</li>
+                    <li style="padding: 16px; color: #575757;">Cross breeds</li>
+                    <li style="padding: 16px; color: #575757;" >Street animals that are recovered</li>
+                    <li style="padding: 16px; color: #575757;">Healthy</li>
+                    <li style="padding: 16px; color: #575757;">Vaccinated</li>
+                    <li style="padding: 16px; background-color: #0c0707;">
+                        <h2>25% discount</h2>
+                    </li>
+                    <li style="background-color:  rgb(71, 68, 68); padding: 24px;">
+                        <button style="background-color: rgb(41, 39, 39); padding: 10px 20px; cursor: pointer;">
+                            <a href="payment.html" style="text-decoration: none; color: inherit;"><a href="#photos" style="color: gray;">check now!</a>                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div><br><br><br>
+        <h3>Benefits</h3>
+        <p>Love & Protective</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 95%;"></div>
+        </div>
+        <p>Reduces stress level</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+        <p>Cuddle Companion</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 80%;"></div>
+        </div><br>
+
+        <div class="stats-container">
+            <div class="stat">
+                <span>1050+</span>
+                International Clients
+            </div>
+            <div class="stat">
+                <span>109+</span>
+                Branches
+            </div>
+            <div class="stat">
+                <span>544+</span>
+                Adopted last year
+            </div>
+            <div class="stat">
+                <span>560+</span>
+                Waiting for home
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button>
+                <i class="fa fa-download"></i><a href="brochure.html"> Download Brochure</a>
+            </button>
+        </div><br><br>
+
+    
+    <div id="photos">
+        <center><h1>Photos</h1></center>
+        <div class="photo-grid">
+            <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\testing.html"><img src="https://images.pexels.com/photos/1694838/pexels-photo-1694838.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Dog"></a>
+            <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\cat final page.html"><img src="https://images.unsplash.com/photo-1615789591457-74a63395c990?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZG9tZXN0aWMlMjBjYXR8ZW58MHx8MHx8fDA%3D" alt="Cat"></a>
+            <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\fish.html"><img src="https://images.pexels.com/photos/2662434/pexels-photo-2662434.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bird"></a>
+            <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\STREET DOG.html"><img src="https://images.unsplash.com/photo-1659554329246-7d9513cb44da?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3RyZWV0JTIwZG9nfGVufDB8fDB8fHww" alt="Fish"></a>
+        </div>
+    </div>
+<br><br><br><br>
+<center>
+    <div id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for any inquiries or adoption processes.</p>
+        <p>Email: <a href="smtplogin.html">petsandco@gmail.com</a></p>
+        <p>Phone: 123-456-7890</p>
+    </div></center>
+</div>
+
+</body>
+
+</html>

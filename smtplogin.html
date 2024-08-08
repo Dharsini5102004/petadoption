@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP javascript</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+<style>
+    body {
+        font-family: "Montserrat", sans-serif;
+        background-color:black;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    .container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .container input[type="text"],
+    .container input[type="email"],
+    .container input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .container button[type="button"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+    }
+
+    .container button[type="button"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    
+<div>
+    <form action="#" class="demo">
+    <input type="text" id="fname" placeholder="enter first name">
+    <br>
+    <br>
+    <input type="text" id="lname" placeholder="enter last name">
+    <br>
+    <br>
+    <input type="email" id="ename" placeholder="enter your email">
+    <br>
+    <br>
+    <input type="number" id="pname" placeholder="phonne number">
+    <br>
+    <br>
+    <button type="button" onclick=" sendotp()" id="but">submit</button>
+    </form>
+</div>
+
+<script src="email.js"></script>
+</body>
+</html>

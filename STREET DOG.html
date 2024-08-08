@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doggie Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, .main {
+            position: relative;
+        }
+        .container {
+            margin-left: 30px;
+            padding-left: 20px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Mild black color */
+            background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            z-index: 3;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+        .sidebar .bar-block {
+            margin: 0;
+        }
+        .sidebar .bar-item {
+            display: block;
+            padding: 16px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar .bar-item:hover {
+            background-color: white;
+            color: #f44336;
+        }
+        .main {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .row-padding {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .half {
+            flex: 1;
+            max-width: calc(50% - 10px); /* Adjust width and spacing */
+        }
+        .half img {
+            width: 100%;
+            margin-bottom: 10px; /* Add margin for spacing */
+            margin-top: 10px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .half img:hover {
+            opacity: 1;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,1);
+        }
+        .modal-content {
+            background-color: black; 
+            margin: 5% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+        }
+        .modal img {
+            width: 100%;
+        }
+        .modal-description {
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #d32f2f;
+        }
+        .xxxlarge {
+            font-size: 36px;
+        }
+        .jumbo {
+            font-size: 48px;
+        }
+        .text-red {
+            color: #f44336;
+        }
+        .round {
+            border-radius: 5px;
+            float: left;
+        }
+        .padding {
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+<nav class="sidebar" id="mySidebar">
+    <div class="container">
+        <h3 class="padding-64" style="font-family:cursive; font-size: 30px;"><b>Pets & Co</b></h3><br><br>
+    </div>
+    <div class="bar-block">
+        <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\demo.html" class="bar-item">Home</a><br>
+        <a href="#showcase" class="bar-item">Showcase</a><br>
+        <a href="#services" class="bar-item">Moto.</a><br>
+        <a href="#designers" class="bar-item">Frequently Asked Questions</a><br>
+        <a href="#packages" class="bar-item">Choosing a Right Pet</a>
+    </div>
+</nav>
+
+<div class="main" style="margin-top:80px">
+    <div class="container" id="showcase">
+        <h1 class="jumbo"><b>Let us begin the change</b></h1>
+        <h1 class="xxxlarge text-red"><b>Adopt Us!..</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br><br>
+    </div>
+    <div class="row-padding">
+        <div class="half">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rajapaalayam_Dog.jpg" onclick="onClick(this, 'Breed: Rajapalayam<br>Age: 3<br>Gender: Male<br>Trained/Not Trained: Trained<br><b>About the Breed:</b><br> Rajapalayam dogs have a pink nose, button ears, whiptail and golden eyes. They have a gait similar to that of a horse and were also used during the Carnatic Wars and Polygar war against the British cavalry. They are not fast runners, but are tireless and steady over long distances')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkdb62mvShRV6L5s2Udprm2cGz-bT59rfVdSfRGR9jyEHmmtsYj3GOa0Vt16Rgyb6CSRo&usqp=CAU" onclick="onClick(this, 'Breed: Gaddi Kutta<br>Age: 2<br>Gender: Female<br>Trained/Not Trained: Trained<br><Colour: Black with Golden Brown<br><b>About the Breed:</b><br>Gaddi dog breed was developed for guarding encampments and livestock (mainly yak, sheep and goats) from predators. Local tribes have used these agile and confident dogs to guard their livestock against predators since historical times.')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Indian_Spitz_Dog.jpg" onclick="onClick(this,'Breed: Indian Spitz<br>Age: 1<br>Gender: Female<br>Trained/Not Trained: Not-Trained<br>Temperament: Playful, Affectionate<br><b>About the Breed:</b><br> The Indian Spitz is a spitz dog breed belonging to the utility group. The Indian Spitz was one of the most popular dogs in India in the 1980s and 1990s when India import rules made it difficult to import dogs of other breeds.')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxA_HUlzFdp59dvVFbWOKftB-AJQHZoTx-2bRzyS6Pl31caE3fQEmbTjWRHEKDaJ5Vczc&usqp=CAU" onclick="onClick(this, 'Breed: Bhakarwal Dog<br>Age: 6 months<br>Gender: Female<br>Trained/Not Trained: Not-Trained<br><b>About the Breed:</b><br>The Bakharwal dog is a livestock guardian dog found in northern India. It is an ancient working Indian dog breed found in Ladakh and across the Pir Panjal Range of Jammu and Kashmir, India.')">
+            <img src="https://cdn.shopify.com/s/files/1/0589/8262/9516/files/Bakharwal_480x480.jpg?v=1680772785" onclick="onClick(this, 'Breed: Kashmiri Sheep Dog<br>Age: 1<br>Gender: Male<br>Trained/Not Trained: Trained<br><b>About the Breed:</b><br>Bully Kutta or Pakistani Mastiff, is a large and powerful dog breed that has been used for hunting, guarding, and fighting in India and Pakistan for centuries. They are known for their muscular build, broad head, and impressive strength. Despite their intimidating appearance, they are known to be loyal, devoted, and protective of their families.')">
+        </div>
+        <div class="half">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh8acoOwk2XGaSfSJYMfX6j9p2ZpIvL4KCiw&s" onclick="onClick(this, 'Breed: Indian Mastiff<br>Age: 3<br>Gender: Male<br>Trained/Not Trained: Trained<br>About the Breed:Bully Kutta or Pakistani Mastiff, is a large and powerful dog breed that has been used for hunting, guarding, and fighting in India and Pakistan for centuries. They are known for their muscular build, broad head, and impressive strength. Despite their intimidating appearance, they are known to be loyal, devoted, and protective of their families.')">
+            <img src="https://static.wixstatic.com/media/886757_5cfd7c2fc7d94f16b20a5b9460fcdc59~mv2.png/v1/fill/w_420,h_256,al_c,lg_1,q_90/886757_5cfd7c2fc7d94f16b20a5b9460fcdc59~mv2.webp" onclick="onClick(this, 'Breed: Gull Turrier<br>Age: 2<br>Gender: Male<br>Trained/Not Trained: Trained<br>About the Breed: Fierce and aggressive with strangers and unsuited for families with small children. They are territorial but respond well to training.')">
+            <img src="https://goelvetpharma.com/wp-content/uploads/2023/11/Unveiling-the-Charm-Indian-Pariah-Dog-Breeds-You-Didnt-Know-Existed-1.jpg" onclick="onClick(this, 'Breed: The Indian Pariah Dog<br>Age: 2<br>Gender: Male<br>Trained/Not Trained: Trained<br>About the Breed: Catеring to thе nutritional rеquirеmеnts of Indian Pariah dogs is еssеntial for their ovеrall wеll-bеing. A balancеd diеt, rich in protеins and vitamins, ensures their еnеrgy lеvеls rеmain high. Consulting with a vеtеrinarian for personalised diеtary rеcommеndations is advisablе.')">
+            <img src="https://www.rover.com/blog/wp-content/uploads/2017/03/villagedogs-romania.jpg" onclick="onClick(this, 'Breed: European Village Dog<br>Age: 4<br>Gender: Male<br>Trained/Not Trained: Trained<br>About the Breed: These shepherd-like village dogs live in mountainous regions of eastern Europe and the Balkans. They are closely linked to Asian village dogs and likely originated from the same ancient wild dogs')">
+            <img src="https://www.pedigree.in/files/inline-images/The%20Mudhol%20Hound.jpg?VersionId=SZQbbfTHLMKZrS2ukpy_Em9BkyfFGuYw" onclick="onClick(this, 'Breed: The Mudhol Hound<br>Age: 3<br>Gender: Male<br>Trained/Not Trained: Trained<br>About the Breed: The Mudhol Hound, also referred to as Caravan Hounds, serve as guard or hunting dogs. Some Mudhols even serve in the military. Their life expectancy is typically 10-14 years.')">
+            <img src="https://static.javatpoint.com/gk/images/dog-breeds-in-india3.jpg" onclick="onClick(this, 'Breed:  Combai<br>Age: 2<br>Gender: Both Male & Female<br>Trained/Not Trained: Trained<br>About the Breed: Combai is an Indian breed that is commonly found at the slopes of the Western Ghats in the southern region of India. It is also known as Indian Terrier. It was at the verge of extinction but revived back by dog lovers and supporters in the Tamil Nadu. This breed is known for aggression and loyalty. It may look similar to the Indian Pariah dog. It is also a healthy Indian dog breed. In the past, it was used by the rulers for the hunt of deer, boar, and bison, etc. This breed is tolerant and gentle with children in the family')">
+
+        </div>
+    </div>
+</div>
+
+<div id="modal01" class="modal" onclick="hideModal()">
+    <span class="button display-topright">&times;</span>
+    <div class="modal-content">
+        <img id="img01" style="max-width:100%">
+        <div id="caption" class="modal-description"></div>
+    </div>
+</div>
+
+
+<script>
+    function onClick(element, description) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("caption").innerHTML = description;
+        document.getElementById("modal01").style.display = "block";
+        document.getElementById("mySidebar").classList.add("hidden");
+    }
+
+    function hideModal() {
+        document.getElementById("modal01").style.display = "none";
+        document.getElementById("mySidebar").classList.remove("hidden");
+    }
+</script>
+<div class="main">
+    <div class="container" id="services" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Moto.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p>To address the welfare of stray animals in the city of Coimbatore, Tamil Nadu, India. This we do through animal birth control and anti-rabies drives, and by rescuing animals that are in urgent need of treatment. The rescued animals are treated and rehabilitated at our ABC and Rescue Centre before being released back to their community. The HAS Sanctuary becomes the new home of the ones for whom release wouldn't be safe.</p>
+        <p>The Annual Report 2022-2023 is a detailed account of our accomplishments during the year. Shared through descriptive text and vivid images, the publication highlights the tireless efforts of our management team, staff members, donors, volunteers, and well-wishers in creating a more compassionate world for the street animals of Coimbatore.</p>
+    </div>
+    <div class="container" id="designers" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Frequently Asked Questions.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p><b>1. What are the various modes of payment accepted?</b></p>
+        <p>You can make payment via Gpay, PhonePay, Paytm, UPI, Net Banking.</p>
+        <p><b>2. What are its hours of operation?</b></p>
+        <p>Sunday-Saturday (9.00 A.M - 6.00 P.M)</p>
+        <p><b>3. Do I need to come to the centre to choose or pick up my pet?</b></p>
+        <p>We strongly encourage you to come to our rehab centre, spend some time with the inmates and choose the right pet for yourself and take them home. However, in scenarios where you can’t, our adoption team will help you with the process.</p>
+        <p><b>4. Are the animals house-trained?</b></p>
+        <p>Most of the animals at AMTM are rescued stray animals who have spent their lives outdoors. However, once at our centre, we try to train them to live indoors. They are familiarised with people and made to feel comfortable in their company. Additionally, all AMTM animals are sterilized and fully vaccinated.</p>
+        <p><b>5. Do you have pedigree animals for adoption?</b></p>
+        <p>Yes. AMTM is dedicated to the service of stray and abandoned animals which includes all species. However, this is rare.</p>
+    </div></div>
+    <img src="https://media.tenor.com/1bvk_tcS8EoAAAAM/dog-puppy.gif" height="500px" width="300px" style="display: block; margin: 0 auto;">
+     <div class="main">
+    <div class="container" id="packages" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Choosing a Right Pet.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p>Choosing the right pet:
+            Before you decide to adopt, we recommend you consider a few factors:
+            <ul>
+                <li>Do you have lots of time to entertain an energetic animal or are you looking for an older, calmer pet?</li>
+                <li>Do you have an outdoor space that your pet can explore safely? Or would you prefer an animal that's comfortable spending time indoors?</li>
+                <li>Do you already have a pet? If yes, what kind of temperament does your existing pet have?</li>
+                <li>If you already have a pet, please bring them with you when you come to the shelter. Photos of your help will help us advise you on who from our animal family will be a good fit for you.</li>
+            </ul>
+        </p>
+    </div></div>
+</body>
+</html>
+

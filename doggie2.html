@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+        body {font-size:16px;}
+        .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+        .w3-half img:hover{opacity:1}
+    </style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+        <h3 class="w3-padding-64"><b>pets & Co</b></h3>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+        <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a>
+        <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Moto.</a>
+        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Frequently asked Questions</a>
+        <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Choosing a right pet.</a>
+    </div>
+</nav>
+
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Company Name</span>
+</header>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+        <h1 class="w3-jumbo"><b>Let us begin the change </b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Adopt Us!..</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-half">
+            <img src="https://images.pexels.com/photos/776078/pexels-photo-776078.jpeg?auto=compress&cs=tinysrgb&w=600" style="width:100%" onclick="onClick(this)" alt="Name:Rizzo <br>Breed:Bulldog <br>Age:3 <br>Gender:female<br>Trained/not Trained:Trained<br> About the Breed:Rizzo is not entirely trusting of people. Sometimes she acts as if she wants to be but when approached she flips her head and starts to growl. This improves with humans she meets consistently and once trust is earned she loves hard. Please note, her behavior is not guarding her owner but herself.">
+            <img src="https://images.pexels.com/photos/130763/pexels-photo-130763.jpeg?auto=compress&cs=tinysrgb&w=600" style="width:100%" onclick="onClick(this)" alt="Name:Jisso <br>Breed: Bichon Frisé <br>Age:4 <br>Gender:female<br>Trained/not Trained:Trained<br> <b>About the Breed:</b><br> A Bichon Frisé is a small breed of dog of the bichon type. <br>
+            Temperament: Playful, Affectionate, Cheerful, Sensitive, Feisty, Gentle<br>
+            Life expectancy: 12 – 15 years<br>
+            Hypoallergenic: Yes<br>
+            Origin: France, Spain, Belgium, Tenerife, Canary Islands<br>
+            Mass: 5.4 – 8.2 kg (Adult)<br>
+            Coat: medium length, silky, texture with corkscrew curls<br>
+            Colour: white"><br>
+            <img src="https://images.pexels.com/photos/3215610/pexels-photo-3215610.jpeg?auto=compress&cs=tinysrgb&w=600" style="width:100%" onclick="onClick(this)" alt="">
+            <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_640.jpg" style="width:100%" onclick="onClick(this)" alt="">
+            <img src="https://media.istockphoto.com/id/955851492/photo/a-cute-brown-dog-is-posing-in-front-of-the-camera-in-one-of-the-many-colorful-alley-of.jpg?s=612x612&w=0&k=20&c=MWl-ERJkNMFR9wPuhdwpiIWsBsjRMhC-kADJgnl7a90=" style="width:100%" onclick="onClick(this)" alt="">
+            
+        </div>
+
+        <div class="w3-half">
+            <img src="https://images.pexels.com/photos/3908803/pexels-photo-3908803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" onclick="onClick(this)" alt="Name:Tessa <br> Breed:Border Collie<br>Age:02<br>Gender:female<br>Trained/not Trained:Not Trained<br>About:The Border Collie is a British breed of herding dog of the collie type of medium size. It originates in the region of the Anglo-Scottish border, and descends from the traditional sheepdogs once found all over the British Isles. It is kept mostly as a working sheep-herding dog or as a companion animal">
+            <img src="https://images.pexels.com/photos/750645/pexels-photo-750645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" onclick="onClick(this)" alt="Name:Machal<br> Breed:Border Collie<br>Age:08<br><Gender:male></Gender:male><br>Trained/not Trained:Trained<br>About:The Border Collie is a British breed of herding dog of the collie type of medium size. It originates in the region of the Anglo-Scottish border, and descends from the traditional sheepdogs once found all over the British Isles. It is kept mostly as a working sheep-herding dog or as a companion animal">
+            <img src="https://images.pexels.com/photos/290720/pexels-photo-290720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+            <img src="https://media.istockphoto.com/id/657542476/photo/hungarian-vizsla-head-portrait.jpg?s=612x612&w=0&k=20&c=eHur3tFYQuH2OkBWz6beKIPPO2jXKWoA-TS5fsGfimY=" style="width:100%" onclick="onClick(this)" alt="">
+            <img src="https://media.istockphoto.com/id/1430187772/photo/alert-border-collie-and-obedience-training.jpg?s=612x612&w=0&k=20&c=Wc7iM6axJnxbgFygyI_6K2duJcDJNBRtOa4TJI4iq3Q=" style="width:100%" onclick="onClick(this)" alt="">
+           
+        </div>
+
+    </div>
+
+
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="w3-container" id="services" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Moto.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <p>To address the welfare of stray animals in the city of Coimbatore, Tamil Nadu, India. This we do through animal birth control and anti-rabies drives, and by rescuing animals that are in urgent need of treatment. The rescued animals are treated and rehabilitated at our ABC and Rescue Centre before being released back to their community. The HAS Sanctuary becomes the new home of the ones for whom release wouldn't be safe.</p>
+        <p>The Annual Report 2022-2023 is a detailed account of our accomplishments during the year. Shared through descriptive text and vivid images, the publication highlights the tireless efforts of our management team, staff members, donors, volunteers, and well-wishers in creating a more compassionate world for the street animals of Coimbatore.
+        <p></p>
+        </p>
+    </div>
+
+    <!-- Designers -->
+    <div class="w3-container" id="designers" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Frequently Asked Questions.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <p><b>1.What are the various mode of payments accepted?</b></p>
+        <p>
+        You can make payment Via Gpay,PhonePay,Paytm,UPI,Net Banking.
+        </p>
+        <p><b>2.What are its hours of operation?</b></p>
+        <p>
+        Sunday-Saturday (9.00 A.M - &6.00 P.M)
+        </p>
+        <p><b>3.Do I need to come to the centre to choose or pick up my pet?</b></p>
+        <p>
+            We strongly encourage you to come to our rehab centre, spend some time with the  inmates and choose the right pet for yourself and take them home. However, in scenarios where you can’t, our adoption team will help you with the process. s
+        </p>
+        <p><b>4.Are the animals house-trained?</b></p>
+        <p>
+            Most of the animals at AMTM are rescued stray animals who have spent their lives outdoors. However, once at our centre, we try to train them to live indoors. They are familiarised with people and made to feel comfortable in their company.  Additionally, all AMTM animals are sterilized and fully vaccinated. 
+
+        </p>
+        <p><b>5.Do you have pedigree animals for adoption?</b></p>
+        Yes. AMTM is dedicated to the service of stray and abandoned animals which includes all species. However, this is rare. 
+        </p>
+    </div>
+    <img src="https://media.tenor.com/1bvk_tcS8EoAAAAM/dog-puppy.gif" height="500px" width="300px" style="align-items: center; display: block; margin-left: auto; margin-right: auto;">
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="packages" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Choosing a right pet.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <p>Choosing the right pet
+            Before you decide to adopt, we recommend you consider a few factors:
+            
+            Do you have lots of time to entertain an energetic animal or are you looking for an older, calmer pet?
+            Do you have an outdoor space that your pet can explore safely? Or would you prefer an animal that’s comfortable spending time indoors?
+            Do you already have a pet? If yes, what kind of temperament does your existing pet have?
+            If you already have a pet, please bring them with you when you come to the shelter. Photos of your help will help us advise you on who from our animal family will be a good fit for you.  </p>
+        
+    </div>
+            <script>
+                // Script to open and close sidebar
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                }
+            
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
+            
+                // Modal Image Gallery
+                function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                }
+            </script>
+            
+            
+            
+    </div>
+</body>
+</html>

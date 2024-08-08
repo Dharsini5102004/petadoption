@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Birds Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, .main {
+            position: relative;
+        }
+        .container {
+            margin-left: 30px;
+            padding-left: 20px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Mild black color */
+            background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            z-index: 3;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+        .sidebar .bar-block {
+            margin: 0;
+        }
+        .sidebar .bar-item {
+            display: block;
+            padding: 16px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar .bar-item:hover {
+            background-color: white;
+            color: #f44336;
+        }
+        .main {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .row-padding {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .half {
+            flex: 1;
+            max-width: calc(50% - 10px); /* Adjust width and spacing */
+        }
+        .half img {
+            width: 100%;
+            margin-bottom: 10px; /* Add margin for spacing */
+            margin-top: 10px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .half img:hover {
+            opacity: 1;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,1); /* Set background to complete black */
+        }
+        .modal-content {
+            background-color: black; /* Background color for the modal content */
+            margin: 5% auto; /* Adjusted margin for better centering */
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+        }
+        .modal img {
+            width: 100%;
+        }
+        .modal-description {
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #d32f2f;
+        }
+        .xxxlarge {
+            font-size: 36px;
+        }
+        .jumbo {
+            font-size: 48px;
+        }
+        .text-red {
+            color: #f44336;
+        }
+        .round {
+            border-radius: 5px;
+            float: left;
+        }
+        .padding {
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+<nav class="sidebar" id="mySidebar">
+    <div class="container">
+        <h3 class="padding-64" style="font-family:cursive; font-size: 30px;"><b>Pets & Co</b></h3><br><br>
+    </div>
+    <div class="bar-block">
+        <a href="C:\Users\dhars\OneDrive\Desktop\spring boot project\demo.html" class="bar-item">Home</a><br>
+        <a href="#showcase" class="bar-item">Showcase</a><br>
+        <a href="#services" class="bar-item">Moto.</a><br>
+        <a href="#designers" class="bar-item">Frequently Asked Questions</a><br>
+        <a href="#packages" class="bar-item">Choosing a Right Pet</a>
+    </div>
+</nav>
+<div class="main" style="margin-top:80px">
+    <div class="container" id="showcase">
+        <h1 class="jumbo"><b>Let us begin the change</b></h1>
+        <h1 class="xxxlarge text-red"><b>Adopt Us!..</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br><br>
+    </div>
+    <div class="row-padding">
+        <div class="half">
+            <img src="https://www.tracyvets.com/files/Parakeets.jpeg" onclick="onClick(this, 'Name: Baeker<br>Breed: Parakeets<br>Gender: Both Female & Male<br>About the breed: Parakeets are perhaps the most popular type of pet bird the world over. They are exceptionally affectionate and friendly companion birds when properly trained and cared for.Parakeets are among the most low-maintenance types of birds kept as pets, being among the smallest companion birds as well as relatively easy to train in their youth. Males especially are known to be great birds for first-time owners, as they bond easily to their owners and are simple to train.')">
+            <img src="https://www.tracyvets.com/files/Cockatiel.jpeg" onclick="onClick(this, 'Name: Chintu<br>Breed: Cocktails<br><br>Gender: Both Male & Male<br><b>About the Breed:</b> A member of the parrot family, these smart little birds crave social interaction and require an owner who can provide them with the time and attention they need in order to thrive and prevent loneliness, or depression. It’s recommended to keep cockatiels in pairs so they do not get lonely when you have to leave the home; single cockatiels can be kept as pets, but they require near-constant attention from their owner to stay in high spirits.')">
+            <img src="https://www.tracyvets.com/files/Canary.jpeg" onclick="onClick(this,'Name: Chiku<br>Breed: Canaries<br>Gender: Both Male & Female<br>Life-span:3 Years<br>Pet weight: less than 1 ounce<br>About the Breed:</b> Canaries are shyer than other birds on this list and do not like to be handled, so you might need to put in a little extra work to overcome their timid nature and bond with your new friend after taking a Canary home.  Much like doves, canaries require a large flight cage to stay happy and healthy.  Canaries are famed for their singing voice, but it is actually only the males who sing.')">
+            <img src="https://www.tracyvets.com/files/HyacinthMacaw-2.jpeg" onclick="onClick(this, 'Name: Nikistha<br>Breed: HyacinthMacaw<br>Gender: Both Male & Female<br>Lifespan:7 years<br><b>About the Breed:</b><br> Given their name, it should be no surprise that Ragamuffins have the tendency to stretch out and go limp in their owner’s arms like, well, a rag. Often called “puppy-like,” these large fur balls are attention-seekers, who enjoy playtime, walks on a leash, and can even learn a trick or two.')">
+            <img src="https://www.tracyvets.com/files/African-Grey-Parrot.jpeg" onclick="onClick(this, 'Name: Niklaus<br>Breed: African-Grey-Parrot<br>Gender: Both Male & Female<br><b>About the Breed:</b><br>African grey parrots are a poor choice for first-time bird owners, but many veteran bird keepers have fallen in love with these demanding companions. African grey parrots are believed to be the smartest birds in the world and are capable of learning a huge vocabulary.  Some African grey parrot owners report that their birds often seem to speak in context, and are very in tune with their handlers with sane')">
+        </div>
+        <div class="half">
+            <img src="https://www.tracyvets.com/files/PionusParrot.jpeg" onclick="onClick(this, 'Name: Hardin<br>Breed: Poinus Parrots<br>Age: 2 months<br>Gender: Both Male & Female<br>About :Pionus parrots are most renowned for being affectionate birds that still maintain their own independence.  While they are happy to socialize with their owners, this type of pet bird will be ok spending long hours on their own to amuse themselves with toys or exercise.They are of medium size and require 3+ hours outside the cage every day to exercise, but nonetheless are low maintenance compared to parrots of similar size and intelligence.  Pionus parrots make for great first parrots, especially compared to more demanding macaws.')">
+            <img src="https://www.tracyvets.com/files/Green-cheek-conure.jpeg" onclick="onClick(this, 'Name: Prince<br>Breed: Green-Cheeked Conures<br>Age: 2 months<br>Gender: Both Male & Female<br>About: The South American green-cheeked conure thrives on spending time socializing with their caretakers. Known to be a little mischievous, these intelligent and playful pranksters bond with their owners through their charming personalities and showmanship.Compared to other species of conure, this type of pet bird tends to be much quieter, it is rare that they will learn how to talk. If you are looking for a very friendly companion who is a little on the quieter side, then a green-cheeked conure might be perfect for you!')">
+            <img src="https://www.coopsandcages.com.au/wp-content/uploads/2014/01/3-Bird-Amazon-Parrots1.jpg" onclick="onClick(this, 'Name: Rachael<br>Breed: Bird-Amazon-Parrots<br>Gender: Female<br>About: The Amazon parrots originated around the areas of South America, Mexico, and the Caribbean. They are noted for their ability to imitate the human speech and various other sounds, making them good pets and companions. They are mainly green but with accenting colours that can sometimes be vivid. Amazon parrots can be territorial and often show their emotions through their feathers.They are prepared to bite if they fan their feathers, pin their eyes on you, and poise their legs wide apart. They love food but they love playing even more.')">
+            <img src="https://www.coopsandcages.com.au/wp-content/uploads/2014/01/7-Bird-Bridled-Titmouse1.jpg" onclick="onClick(this, 'Name: Jessic<br>Breed: Bridled Titmouse<br>Age: 2 years<br>Gender: Male<br>About: Bridled Titmouse is a small songbird, around 4.5 to 5 inches tall. These birds are crested with a patterned face coloured black and white as well as a black bib. Their crest is also black and white or grey. These birds love to forage on branches and on the ground. They often feed on caterpillars, berries and nuts.')">
+            <img src="https://www.coopsandcages.com.au/wp-content/uploads/2014/01/10-Bird-Caique1.jpg" onclick="onClick(this, 'Name: Nancy<br>Breed: Caique<br>Gender: Both Male & Female<br>About: Caiques are small, stocky, and short birds that are native to South America. They are enthusiastic, which makesmaking them comical pets. They are found in two common species – Black-headed and White-bellied Caiques. Caiques may be relatively quiet, but they can let out a loud alarm call, tunes, whistles, and various other household sounds.')">
+        </div>
+    </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="modal" onclick="hideModal()">
+    <span class="button display-topright">&times;</span>
+    <div class="modal-content">
+        <img id="img01" style="max-width:100%">
+        <div id="caption" class="modal-description"></div>
+    </div>
+</div>
+
+
+<script>
+    // Modal Image Gallery
+    function onClick(element, description) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("caption").innerHTML = description;
+        document.getElementById("modal01").style.display = "block";
+        document.getElementById("mySidebar").classList.add("hidden");
+    }
+
+    function hideModal() {
+        document.getElementById("modal01").style.display = "none";
+        document.getElementById("mySidebar").classList.remove("hidden");
+    }
+</script>
+<div class="main">
+    <div class="container" id="services" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Moto.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p>To address the welfare of stray animals in the city of Coimbatore, Tamil Nadu, India. This we do through animal birth control and anti-rabies drives, and by rescuing animals that are in urgent need of treatment. The rescued animals are treated and rehabilitated at our ABC and Rescue Centre before being released back to their community. The HAS Sanctuary becomes the new home of the ones for whom release wouldn't be safe.</p>
+        <p>The Annual Report 2022-2023 is a detailed account of our accomplishments during the year. Shared through descriptive text and vivid images, the publication highlights the tireless efforts of our management team, staff members, donors, volunteers, and well-wishers in creating a more compassionate world for the street animals of Coimbatore.</p>
+    </div>
+    <!-- Designers -->
+    <div class="container" id="designers" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Frequently Asked Questions.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p><b>1. What are the various modes of payment accepted?</b></p>
+        <p>You can make payment via Gpay, PhonePay, Paytm, UPI, Net Banking.</p>
+        <p><b>2. What are its hours of operation?</b></p>
+        <p>Sunday-Saturday (9.00 A.M - 6.00 P.M)</p>
+        <p><b>3. Do I need to come to the centre to choose or pick up my pet?</b></p>
+        <p>We strongly encourage you to come to our rehab centre, spend some time with the inmates and choose the right pet for yourself and take them home. However, in scenarios where you can’t, our adoption team will help you with the process.</p>
+        <p><b>4. Are the animals house-trained?</b></p>
+        <p>Most of the animals at AMTM are rescued stray animals who have spent their lives outdoors. However, once at our centre, we try to train them to live indoors. They are familiarised with people and made to feel comfortable in their company. Additionally, all AMTM animals are sterilized and fully vaccinated.</p>
+        <p><b>5. Do you have pedigree animals for adoption?</b></p>
+        <p>Yes. AMTM is dedicated to the service of stray and abandoned animals which includes all species. However, this is rare.</p>
+    </div></div>
+    <img src="https://media.tenor.com/nskKqrQif7YAAAAM/bird-dancing.gif" height="500px" width="600px" style="display: block; margin: 0 auto;">
+    <!-- Packages / Pricing Tables -->
+     <div class="main">
+    <div class="container" id="packages" style="margin-top:75px">
+        <h1 class="xxxlarge text-red"><b>Choosing a Right Pet.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br>
+        <p>Choosing the right pet:
+            Before you decide to adopt, we recommend you consider a few factors:
+            <ul>
+                <li>Do you have lots of time to entertain an energetic animal or are you looking for an older, calmer pet?</li>
+                <li>Do you have an outdoor space that your pet can explore safely? Or would you prefer an animal that's comfortable spending time indoors?</li>
+                <li>Do you already have a pet? If yes, what kind of temperament does your existing pet have?</li>
+                <li>If you already have a pet, please bring them with you when you come to the shelter. Photos of your help will help us advise you on who from our animal family will be a good fit for you.</li>
+            </ul>
+        </p>
+    </div></div>
+</body>
+</html>

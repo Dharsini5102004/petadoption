@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doggie Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, h1, h2, h3, h4, h5
+        {
+            font-family: "Poppins", sans-serif;
+        }
+        body 
+        {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        header, nav, .main 
+        {
+            position: relative;
+        }
+        .container 
+        {
+            margin-left: 30px;
+            padding-left: 20px;
+            
+        }
+        .sidebar 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            z-index: 3;
+            display: block;
+        }
+        .sidebar .bar-block 
+        {
+            margin: 0;
+        }
+        .sidebar .bar-item 
+        {
+            display: block;
+            padding: 16px;
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar .bar-item:hover 
+        {
+            background-color: white;
+            color: #f44336;
+        }
+        .overlay 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+        }
+        .main 
+        {
+            margin-left: 270px; /* Adjusted margin to fit the sidebar */
+            margin-right: 40px;
+            padding: 20px; /* Added padding */
+        }
+        
+        .row-padding 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .half 
+        {
+            flex: 1;
+            min-width: 0;
+        }
+        .half img 
+        {
+            width: 100%;
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .half img:hover 
+        {
+            opacity: 1;
+        }
+        .modal 
+        {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content 
+        {
+            background-color: black;
+            margin: 15% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+        }
+        .modal img 
+        {
+            width: 100%;
+        }
+        .modal-description 
+        {
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .button 
+        {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover 
+        {
+            background-color: #d32f2f;
+        }
+        .xxxlarge 
+        {
+            font-size: 36px;
+        }
+        .jumbo 
+        {
+            font-size: 48px;
+        }
+        .text-red 
+        {
+            color: #f44336;
+        }
+        .round 
+        {
+            border-radius: 5px;
+            float:left;
+        }
+        .padding 
+        {
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+<!-- Sidebar/menu -->
+<nav class="sidebar" id="mySidebar">
+    <div class="container">
+        <h3 class="padding-64"><b>Pets & Co</b></h3>
+    </div>
+    <div class="bar-block">
+        <a href="#" class="bar-item">Home</a>
+        <a href="#showcase" class="bar-item">Showcase</a>
+        <a href="#services" class="bar-item">Moto.</a>
+        <a href="#designers" class="bar-item">Frequently Asked Questions</a>
+        <a href="#packages" class="bar-item">Choosing a Right Pet</a>
+    </div>
+</nav>
+<div class="overlay" onclick="w3_close()" id="myOverlay"></div>
+<div class="main" style="margin-top:80px">
+    <div class="container" id="showcase">
+        <h1 class="jumbo"><b>Let us begin the change</b></h1>
+        <h1 class="xxxlarge text-red"><b>Adopt Us!..</b></h1>
+        <hr style="width:50px;border:5px solid red" class="round"><br><br>
+    </div>
+    <div class="main1">
+    <div class="row-padding">
+        <div class="half">
+            <img src="https://images.pexels.com/photos/776078/pexels-photo-776078.jpeg?auto=compress&cs=tinysrgb&w=600" onclick="onClick(this, 'Name: Rizzo<br>Breed: Bulldog<br>Age: 3<br>Gender: Female<br>Trained/Not Trained: Trained<br>About the Breed: Rizzo is not entirely trusting of people. Sometimes she acts as if she wants to be but when approached she flips her head and starts to growl. This improves with humans she meets consistently and once trust is earned she loves hard. Please note, her behavior is not guarding her owner but herself.')">
+            <img src="https://images.pexels.com/photos/130763/pexels-photo-130763.jpeg?auto=compress&cs=tinysrgb&w=600" onclick="onClick(this, 'Name: Jisso<br>Breed: Bichon Frisé<br>Age: 4<br>Gender: Female<br>Trained/Not Trained: Trained<br><b>About the Breed:</b><br>A Bichon Frisé is a small breed of dog of the bichon type.<br>Temperament: Playful, Affectionate, Cheerful, Sensitive, Feisty, Gentle<br>Life expectancy: 12 – 15 years<br>Hypoallergenic: Yes<br>Origin: France, Spain, Belgium, Tenerife, Canary Islands<br>Mass: 5.4 – 8.2 kg (Adult)<br>Coat: Medium length, silky, texture with corkscrew curls<br>Colour: White')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCpDMCsCyBeQ1S_elAeF3y-AERGzWAQWJF4Q&s" onclick="onClick(this,'Name: MarryJonas<br>Breed: Poodle<br>Age: 1<br>Gender: Female<br>Trained/Not Trained: Not-Trained<br><b>About the Breed:</b><br>fun, energetic, smart and easy to train. They do best with plenty of exercise for both mind and body and prefer to be with people most of the time. They are not good kennel dogs. Socialization should begin early and include other people, other pets and the grooming routine.<br>Temperament: Playful, Affectionate<br>Life expectancy: 12 – 15 years<br>Hypoallergenic: No<br>Origin: Germany<br>Mass:20–32 kg (44–71 lb) <br>')">
+            <img src="https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_640.jpg" onclick="onClick(this, 'Name: Jack<br>Breed: Dachshund<br>Age: 3<br>Gender: Male<br>Trained/Not Trained: Trained<br><b>About the Breed:</b><br>Dachshunds are generally even-tempered and affectionate, which combined with their smaller size makes them an ideal companion for children. However, they can be vocal and snappy if play gets too boisterous so they ')">
+            <img src="https://cdn.britannica.com/72/234472-050-735B6214/maltese-dog.jpg" onclick="onClick(this, 'Name: Stefane<br>Breed: Maltese Dog<br>Age: 2<br>Gender: Female<br>Trained/Not Trained: Non-Trained<br><b>About the Breed:</b><br>Maltese dog refers both to an ancient variety of dwarf, white-coated dog breed from Italy and generally associated also with the island of Malta, and to a modern breed of similar dogs in the toy group, genetically related to the Bichon, Bolognese, and Havanese breeds')">
+        </div>
+        <div class="half">
+            <img src="https://images.pexels.com/photos/3908803/pexels-photo-3908803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onclick="onClick(this, 'Name: Tessa<br>Breed: Border Collie<br>Age: 02<br>Gender: Female<br>Trained/Not Trained: Not Trained<br>About: The Border Collie is a British breed of herding dog of the collie type of medium size. It originates in the region of the Anglo-Scottish border, and descends from the traditional sheepdogs once found all over the British Isles. It is kept mostly as a working sheep-herding dog or as a companion animal.')">
+            <img src="https://images.pexels.com/photos/750645/pexels-photo-750645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onclick="onClick(this, 'Name: Machal<br>Breed: Border Collie<br>Age: 08<br>Gender: Male<br>Trained/Not Trained: Trained<br>About: The Border Collie is a British breed of herding dog of the collie type of medium size. It originates in the region of the Anglo-Scottish border, and descends from the traditional sheepdogs once found all over the British Isles. It is kept mostly as a working sheep-herding dog or as a companion animal.')">
+            <img src="https://www.purina.in/sites/default/files/styles/ttt_image_510/public/2021-01/Maltipoo2.jpg?itok=c1gRVMga" onclick="onClick(this, 'Name: Michael<br>Breed: Maltipo<br>Age: 3<br>Gender: Male<br>Trained/Not Trained: Non-Trained<br>About: Known as a designer dog, these charming little pups are a fairly new breed. Falling into the popular category of Poodle mixes, Maltipoos are a mix between the Maltese and the Poodle.')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A_Havanese_judging.jpg/1200px-A_Havanese_judging.jpg" onclick="onClick(this, 'Name: Jessie<br>Breed: Havanese<br>Age: 2 1/2<br>Gender: Female<br>Trained/Not Trained: Non-Trained<br>About: a bichon-type dog, is the national dog of Cuba, developed from the now extinct Blanquito de la Habana. The Blanquito descended from the also now-extinct Bichón Tenerife.')">
+            <img src="https://cdn.britannica.com/41/233841-050-4FFECCF1/Pomeranian-dog.jpg" onclick="onClick(this, 'Name: Damonie<br>Breed: Pomeranian<br>Age: 1 1/2<br>Gender: Male<br>Trained/Not Trained: Non-Trained<br>About:he Pomeranian is a breed of dog of the Spitz type that is named for the Pomerania region in north-west Poland and north-east Germany in Central Europe. Classed as a toy dog breed because of its small size, the Pomeranian is descended from larger Spitz-type dogs, specifically the German Spitz. ')">
+        </div>
+    </div>
+</div></div>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="modal" onclick="this.style.display='none'">
+    <div class="modal-content">
+        <img id="img01" style="max-width:100%">
+        <div id="caption" class="modal-description"></div>
+    </div>
+</div>
+<div class="main">
+<div class="container" id="services" style="margin-top:75px">
+    <h1 class="xxxlarge text-red"><b>Moto.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="round"><br>
+    <p>To address the welfare of stray animals in the city of Coimbatore, Tamil Nadu, India. This we do through animal birth control and anti-rabies drives, and by rescuing animals that are in urgent need of treatment. The rescued animals are treated and rehabilitated at our ABC and Rescue Centre before being released back to their community. The HAS Sanctuary becomes the new home of the ones for whom release wouldn't be safe.</p>
+    <p>The Annual Report 2022-2023 is a detailed account of our accomplishments during the year. Shared through descriptive text and vivid images, the publication highlights the tireless efforts of our management team, staff members, donors, volunteers, and well-wishers in creating a more compassionate world for the street animals of Coimbatore.</p>
+</div>
+<!-- Designers -->
+<div class="container" id="designers" style="margin-top:75px">
+    <h1 class="xxxlarge text-red"><b>Frequently Asked Questions.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="round"><br>
+    <p><b>1. What are the various modes of payment accepted?</b></p>
+    <p>You can make payment via Gpay, PhonePay, Paytm, UPI, Net Banking.</p>
+    <p><b>2. What are its hours of operation?</b></p>
+    <p>Sunday-Saturday (9.00 A.M - 6.00 P.M)</p>
+    <p><b>3. Do I need to come to the centre to choose or pick up my pet?</b></p>
+    <p>We strongly encourage you to come to our rehab centre, spend some time with the inmates and choose the right pet for yourself and take them home. However, in scenarios where you can’t, our adoption team will help you with the process.</p>
+    <p><b>4. Are the animals house-trained?</b></p>
+    <p>Most of the animals at AMTM are rescued stray animals who have spent their lives outdoors. However, once at our centre, we try to train them to live indoors. They are familiarised with people and made to feel comfortable in their company. Additionally, all AMTM animals are sterilized and fully vaccinated.</p>
+    <p><b>5. Do you have pedigree animals for adoption?</b></p>
+    <p>Yes. AMTM is dedicated to the service of stray and abandoned animals which includes all species. However, this is rare.</p>
+</div></div>
+<img src="https://media.tenor.com/1bvk_tcS8EoAAAAM/dog-puppy.gif" height="500px" width="300px" style="display: block; margin: 0 auto;">
+<!-- Packages / Pricing Tables -->
+ <div class="main">
+<div class="container" id="packages" style="margin-top:75px">
+    <h1 class="xxxlarge text-red"><b>Choosing a Right Pet.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="round"><br>
+    <p>Choosing the right pet:
+        Before you decide to adopt, we recommend you consider a few factors:
+        <ul>
+            <li>Do you have lots of time to entertain an energetic animal or are you looking for an older, calmer pet?</li>
+            <li>Do you have an outdoor space that your pet can explore safely? Or would you prefer an animal that's comfortable spending time indoors?</li>
+            <li>Do you already have a pet? If yes, what kind of temperament does your existing pet have?</li>
+            <li>If you already have a pet, please bring them with you when you come to the shelter. Photos of your help will help us advise you on who from our animal family will be a good fit for you.</li>
+        </ul>
+    </p>
+</div></div>
+<script>
+function onClick(element, description)
+{
+    document.getElementById("img01").src = element.src;
+    document.getElementById("caption").innerHTML = description;
+    document.getElementById("modal01").style.display = "block";
+}
+</script>
+</body>
+</html>
